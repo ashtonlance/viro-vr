@@ -27,6 +27,7 @@ export default class ViroSample extends Component {
     return (
       <ViroSceneNavigator apiKey="9782BD73-E740-4A78-8495-C4F4F0B01F3F"
        initialScene={{scene: InitialScene}}
+       vrModeEnabled={true}
         />
     );
   }
