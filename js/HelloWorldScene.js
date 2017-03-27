@@ -30,9 +30,13 @@ var HelloWorldScene = React.createClass({
       <Viro360Image source={require('./res/360_space.jpg')} />
         <ViroText text={this.state.text} width={2} height={2} position={[0, 0, -2]} style={styles.helloWorldTextStyle} />
         <ViroAnimatedComponent animation='animateImage' loop={true} run={true}>
-          <ViroBox position={[0, -2, -3]} width={.5} height={.5} length={.5} scale={[2,2,2]} materials={["grid"]}
+          <ViroBox position={[1, -2, -3]} width={.5} height={.5} length={.5} scale={[2,2,2]} materials={["grid"]}
          onHover={this._showHelloBeachScene}/>
          </ViroAnimatedComponent>
+         <ViroAnimatedComponent animation='animateImage' loop={true} run={true}>
+           <ViroBox position={[-1, -2, -3]} width={.5} height={.5} length={.5} scale={[2,2,2]} materials={["grid"]}
+          onHover={this._showHelloBeachScene}/>
+          </ViroAnimatedComponent>
 
      </ViroScene>
     );
