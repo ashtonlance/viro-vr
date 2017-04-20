@@ -38,9 +38,7 @@ var RubyFalls = React.createClass({
     },
 
     _showHelloWorldScene() {
-        // this.setTimeout(() => {
             this.props.sceneNavigator.push({scene: require("./HelloWorldScene.js")});
-        // }, 1500);
     },
 
     _onUpdateTime() {

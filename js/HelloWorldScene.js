@@ -39,24 +39,17 @@ var HelloWorldScene = React.createClass({
         );
     },
 
-    _onBoxHover(isHovering) {
-        let text = isHovering
-            ? "Hello Box!"
-            : "Hello World!";
-        this.setState({text});
-    },
-
     _showRubyFalls() {
 
-        // this.setTimeout(() => {
+        
             this.props.sceneNavigator.push({scene: require("./RubyFalls.js")});
-        // }, 2500);
+        
     },
 
     _showMontage() {
-        // this.setTimeout(() => {
+        
             this.props.sceneNavigator.push({scene: require("./VIPMontage.js")});
-        // }, 2500);
+        
     }
 });
 
