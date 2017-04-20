@@ -16,7 +16,7 @@ import {
     ViroSpinner
 } from 'react-viro';
 
-var HelloBeachScene = React.createClass({
+var Montage = React.createClass({
     mixins: [TimerMixin],
     getInitialState() {
       return {
@@ -27,20 +27,20 @@ var HelloBeachScene = React.createClass({
     render: function() {
         return (
             <ViroScene>
-                <Viro360Video source={require("./video/CMC-360_0036_TEST-Title-InsetVideo-1920x960_EDITED_03-23-17.mp4")} loop={true} onUpdateTime={this._onUpdateTime}/>
+                <Viro360Video source={require("./video/VIP 360 VR Montage 03-30-2017 1920x1080.mp4")} loop={true} onUpdateTime={this._onUpdateTime} />
 
-                <ViroBox position={[-4, -4, -2]} width={.5} height={.5} length={.5} scale={[1, 1, 1]} materials={["spacebox"]} onHover={this._showHelloWorldScene}/>
+                <ViroBox position={[-4, -4, -2]} width={.5} height={.5} length={.5} scale={[1, 1, 1]} materials={["spacebox"]} onTouch={this._showHelloWorldScene} />
 
-                <ViroSpinner visible={this.state.showSpinner} type='light' position={[0, 0, -2]}/>
+                <ViroSpinner visible={this.state.showSpinner} type='light' position={[0, 0, -2]} />
             </ViroScene>
 
         );
     },
 
     _showHelloWorldScene() {
-        this.setTimeout(() => {
+        // this.setTimeout(() => {
             this.props.sceneNavigator.push({scene: require("./HelloWorldScene.js")});
-        }, 1500);
+        // }, 1500);
     },
 
     _onUpdateTime() {
@@ -56,8 +56,8 @@ var HelloBeachScene = React.createClass({
 
 ViroMaterials.createMaterials({
     spacebox: {
-        diffuseTexture: require('./res/360_space.jpg')
+        diffuseTexture: require('./res/btn_white.png')
     }
 });
 
-module.exports = HelloBeachScene;
+module.exports = Montage;

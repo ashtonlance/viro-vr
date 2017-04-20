@@ -3004,6 +3004,10 @@ react-transform-hmr@^1.0.4:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
+react-viro@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-viro/-/react-viro-1.0.0.tgz#2f91bd743421f3f39a0eec1610583c8cc1060cd5"
+
 react@~15.4.0:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
