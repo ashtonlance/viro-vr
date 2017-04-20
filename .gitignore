@@ -53,3 +53,4 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 js/video
+/android/app-ovr-release.apk
