@@ -27,7 +27,7 @@ var RubyFalls = React.createClass({
     render: function() {
         return (
             <ViroScene>
-                <Viro360Video source={require("./video/Ruby Falls TRIMcomp.mp4")} loop={true} onUpdateTime={this._onUpdateTime} />
+                <Viro360Video source={require("./video/RubyFalls.mp4")} loop={true} onUpdateTime={this._onUpdateTime} />
 
                 <ViroBox position={[-4, -4, -2]} width={.5} height={.5} length={.5} scale={[1, 1, 1]} materials={["spacebox"]} onTouch={this._showHelloWorldScene} />
 

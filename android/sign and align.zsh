@@ -1,1 +1,0 @@
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore app/vipgearvr.keystore app-ovr-release-unsigned.apk vipgearvr && zipalign -v 4 app-ovr-release-unsigned.apk vipgearvr.apk

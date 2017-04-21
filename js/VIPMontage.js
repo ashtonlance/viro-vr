@@ -27,7 +27,7 @@ var Montage = React.createClass({
     render: function() {
         return (
             <ViroScene>
-                <Viro360Video source={require("./video/VIP 360 VR Montage 03-30-2017 1920x1080.mp4")} loop={true} onUpdateTime={this._onUpdateTime} />
+                <Viro360Video source={require("./video/VIPMontage.mp4")} loop={true} onUpdateTime={this._onUpdateTime} />
 
                 <ViroBox position={[-4, -4, -2]} width={.5} height={.5} length={.5} scale={[1, 1, 1]} materials={["spacebox"]} onTouch={this._showHelloWorldScene} />
 
@@ -38,7 +38,7 @@ var Montage = React.createClass({
     },
 
     _showHelloWorldScene() {
-            this.props.sceneNavigator.push({scene: require("./HelloWorldScene.js")});
+            this.props.sceneNavigator.pop();
 
     },
 
