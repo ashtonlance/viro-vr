@@ -27,8 +27,8 @@ export default class ViroSample extends Component {
   }
 }
 
-AppRegistry.registerComponent('ViroSample', () => ViroSample);
+AppRegistry.registerComponent('VIPGearVR', () => ViroSample);
 
 // The below line is necessary for use with the TestBed App
-AppRegistry.registerComponent('ViroSample', () => ViroSample);
+AppRegistry.registerComponent('VIPGearVR', () => ViroSample);
 

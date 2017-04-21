@@ -29,7 +29,7 @@ var Montage = React.createClass({
             <ViroScene>
                 <Viro360Video source={require("./video/VIPMontage.mp4")} loop={true} onUpdateTime={this._onUpdateTime} />
 
-                <ViroBox position={[-4, -4, -2]} width={.5} height={.5} length={.5} scale={[1, 1, 1]} materials={["spacebox"]} onTouch={this._showHelloWorldScene} />
+                <ViroBox position={[-4, -4, -2]} width={.5} height={.5} length={.5} scale={[1, 1, 1]} materials={["spacebox"]} onTouch={this._showHelloWorldScene} onClick={this._showHelloWorldScene}/>
 
                 <ViroSpinner visible={this.state.showSpinner} type='light' position={[0, 0, -2]} />
             </ViroScene>
@@ -38,8 +38,7 @@ var Montage = React.createClass({
     },
 
     _showHelloWorldScene() {
-            this.props.sceneNavigator.pop();
-
+            this.props.sceneNavigator.push({scene: require("./HelloWorldScene.js")});
     },
 
     _onUpdateTime() {
