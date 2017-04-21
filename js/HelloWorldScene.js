@@ -65,10 +65,10 @@ var styles = StyleSheet.create({
 
 ViroMaterials.createMaterials({
     grid: {
-        diffuseTexture: require('./res/btn_white.png')
+        diffuseTexture: require('./res/btnwhite.png')
     },
     rubyFalls: {
-        diffuseTexture: require('./res/RF-Logo.jpg')
+        diffuseTexture: require('./res/RFLogo.jpg')
     }
 });
 

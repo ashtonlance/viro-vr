@@ -55,7 +55,7 @@ var Montage = React.createClass({
 
 ViroMaterials.createMaterials({
     spacebox: {
-        diffuseTexture: require('./res/btn_white.png')
+        diffuseTexture: require('./res/btnwhite.png')
     }
 });
 
