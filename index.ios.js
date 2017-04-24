@@ -1,39 +1,51 @@
 /**
- * Copyright (c) 2016-present, Viro, Inc.
+ * Copyright (c) 2015-present, Viro Media, Inc.
  * All rights reserved.
  *
  * This source code is licensed under the BSD-style license found in the
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
+ *
  */
+'use strict';
+
 import React, { Component } from 'react';
+
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View
 } from 'react-native';
 
 import {
   ViroSceneNavigator,
-  ViroScene,
-  ViroBox,
 } from 'react-viro';
 
-var InitialScene = require('./js/HelloWorldScene');
 
-export default class ViroSample extends Component {
-  render() {
-    return (
-      <ViroSceneNavigator apiKey="9782BD73-E740-4A78-8495-C4F4F0B01F3F"
-       initialScene={{scene: InitialScene}}
-       vrModeEnabled={true}
-        />
-    );
-  }
+var scenes = {
+    '360 Photo Tour': require('./js/360PhotoTour/MainScene'),
+    'Hello World': require('./js/HelloWorld/HelloWorldScene'),
+    'Human Body': require('./js/HumanBody/MainScene'),
+    'TV Shopping': require('./js/TVShopping/TVShopping'),
+    'Viro Media Player': require('./js/ViroMediaPlayer/Viro360Theatre'),
 }
 
-AppRegistry.registerComponent('ViroSample', () => ViroSample);
+var ViroCodeSamplesSceneNavigator = React.createClass({
+  render: function() {
+    // The 'viroAppProps={{...this.props}}' line below is used to pass
+    // the initial properties from this base component to the ViroSceneNavigator
+    // which will allow the scenes to access them.
+    return (
+      <ViroSceneNavigator
+        initialScene={{
+          scene: scenes['Viro Media Player'],
+        }}
+        viroAppProps={{...this.props}}
+        apiKey="9782BD73-E740-4A78-8495-C4F4F0B01F3F"
+      />
+    );
+  }
+});
 
-// The below line is necessary for use with the TestBed App
-AppRegistry.registerComponent('ViroSample', () => ViroSample);
+AppRegistry.registerComponent('VIPGearVR', () => ViroCodeSamplesSceneNavigator);
+
+// register the component again as ViroSample to enable use with the testbed app
+AppRegistry.registerComponent('VIPGearVR', () => ViroCodeSamplesSceneNavigator);
