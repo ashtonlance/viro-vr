@@ -34,8 +34,8 @@ var VideoControlRef = "VideoControlRef";
  * Several references to video sources (wether it be local or on AWS) stored in an array.
  */
 var videos = [
-  {uri:'https://s3-us-west-2.amazonaws.com/viro/Assets/Viro_Media_Video.mp4'},
-  {uri:'https://s3-us-west-2.amazonaws.com/viro/Assets/ProductVideo.mp4'},
+  require('./res/RubyFalls.mp4'),
+  {uri:'https://s3-us-west-2.amazonaws.com/viro/MediaDemo360_2.mp4'}
 ];
 
 var ViroTheatre = React.createClass({

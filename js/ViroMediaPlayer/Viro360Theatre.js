@@ -59,9 +59,6 @@ var Viro360Theatre = React.createClass({
           <Viro360Video ref={VIDEO_REF} source={videos[this.state.videoIndex]} volume={1.0}
             loop={this.state.loopVideo} paused={this.state.videoPaused} onFinish={this._onFinish} />
 
-            {/*<ViroSphere position={[0,0,0]} materials='videoMaterial'
-            facesOutward={false} heightSegmentCount={50} widthSegmentCount={50} radius={5} />*/}
-
           <ViroAnimatedComponent animation={this.state.videoControlsAnimation} run={this.state.runAnimation} loop={false} ref={VideoControlRef}>
               {this._renderVideoControl()}
           </ViroAnimatedComponent>
@@ -116,7 +113,7 @@ var Viro360Theatre = React.createClass({
                 tapSource={require("./res/skip_hover.png")}
                 onClick={this._playNextVideo}/>
 
-          {/*<ViroButton
+          <ViroButton
               position={[-0.3, -0.4 ,-2]}
               scale={[1, 1, 1]}
               width={0.5}
@@ -135,7 +132,7 @@ var Viro360Theatre = React.createClass({
               source={require("./res/icon_360_hover.png")}
               gazeSource={require("./res/icon_360_hover.png")}
               tapSource={require("./res/icon_360_hover.png")}
-              />*/}
+              />
         </ViroNode>
     );
   },
@@ -220,12 +217,5 @@ ViroAnimations.registerAnimations({
   fadeIn:{properties:{opacity: 1.0}, duration: 500},
 });
 
-ViroMaterials.createMaterials({
-  videoMaterial: {
-    shininess: 1.0,
-    lightingModel: "Constant",
-    diffuseTexture: {"uri": "https://s3-us-west-2.amazonaws.com/viro/mov360.mp4"}
-  },
-});
 
 module.exports = Viro360Theatre;

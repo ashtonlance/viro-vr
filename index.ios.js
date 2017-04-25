@@ -25,7 +25,7 @@ var scenes = {
     'Hello World': require('./js/HelloWorld/HelloWorldScene'),
     'Human Body': require('./js/HumanBody/MainScene'),
     'TV Shopping': require('./js/TVShopping/TVShopping'),
-    'Viro Media Player': require('./js/ViroMediaPlayer/Viro360Theatre'),
+    'Viro Media Player': require('./js/ViroMediaPlayer/ViroTheatre'),
 }
 
 var ViroCodeSamplesSceneNavigator = React.createClass({
@@ -48,4 +48,4 @@ var ViroCodeSamplesSceneNavigator = React.createClass({
 AppRegistry.registerComponent('VIPGearVR', () => ViroCodeSamplesSceneNavigator);
 
 // register the component again as ViroSample to enable use with the testbed app
-AppRegistry.registerComponent('VIPGearVR', () => ViroCodeSamplesSceneNavigator);
+AppRegistry.registerComponent('ViroSample', () => ViroCodeSamplesSceneNavigator);

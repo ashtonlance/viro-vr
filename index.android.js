@@ -25,7 +25,7 @@ var scenes = {
     'Hello World': require('./js/HelloWorld/HelloWorldScene'),
     'Human Body': require('./js/HumanBody/MainScene'),
     'TV Shopping': require('./js/TVShopping/TVShopping'),
-    'Viro Media Player': require('./js/ViroMediaPlayer/Viro360Theatre'),
+    'Viro Media Player': require('./js/ViroMediaPlayer/ViroTheatre'),
 }
 
 var ViroCodeSamplesSceneNavigator = React.createClass({
